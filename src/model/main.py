@@ -5,16 +5,19 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
+# Initialize the model with pretrained weights
 model = initialize_model(r'src\weights\bert_vit_20epochs.pt')
 
 while True:
     image = str(input("Image name: "))
     image_path = f"images\{image}"
 
+    # Check if the image file exists
     if not os.path.exists(image_path):
         print(f"Enter the valid image name!\n")
         continue
 
+    # Input the question. Exit the loop if the input is "stop"
     question = str(input("Question: "))
     if question == "stop":
         break
@@ -25,3 +28,4 @@ while True:
 
     print(f"Answer: {answer}")
     print(f"--execution time: {e-s:.2f} sec--\n")
+    
