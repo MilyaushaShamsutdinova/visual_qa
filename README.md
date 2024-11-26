@@ -1,2 +1,2 @@
 # visual_qa
-Visual Question Answering (VAQ)
+Visual Question Answering (VQA)
